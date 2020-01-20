@@ -14,5 +14,5 @@ def load_table(conn, table_name):
 
 
 def convert_dollars_to_int(df, col):
-    df[col] = df[col].str.replace("$", "").str.replace(",", "").astype('int')
+    df[col] = df[col].str.replace("$", "").str.replace(",", "").astype('int64')
     return df
