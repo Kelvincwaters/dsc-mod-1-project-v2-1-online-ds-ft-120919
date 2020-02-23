@@ -7,7 +7,7 @@
 ```
 
 
-<img src="images/mbuilding.jpg", width=900>
+![title](images/mbuilding.jpg)
 
 
 
@@ -190,7 +190,12 @@ Index(['index', 'genre_ids', 'id', 'original_language', 'original_title',
 # further research would be to compare other markets and to improve what contitutes a good popularity rating.  
 pop = tmdb_bom_merge.groupby(['title', 'domestic_gross', 'pop/dom_gross'])['popularity'].agg('sum').sort_values(ascending= False)
 pop.head(25)
+```
+![title](images/pop vs domestic.png)
 
+![title](images/scatter map.png)
+
+```python
 title                                        domestic_gross  pop/dom_gross
 Blade Runner 2049                            92100000.0      5.273724e-07     97.142
 Thor: Ragnarok                               315100000.0     1.378927e-07     86.900
@@ -220,7 +225,7 @@ The Shape of Water                           63900000.0      3.446792e-07     44
 Name: popularity, dtype: float64
 
 ```
-**Recommendation: No correalation, I would recommend that merchandise associated with films was used to gauge how popular a film is, of course this wouldn't be feasible for a lot of films, but could indicate public support for a storyline like Disney's Frozen as an example. Not sure the of a demand of IT dolls!*
+**Recommendation: At a value of 0.072572013 no correalation, I would recommend that merchandise associated with films is also used to gauge how popular a film is, of course this wouldn't be feasible for a lot of films, but could indicate public support for a storyline like Disney's Frozen as an example. Not sure the of a demand of IT dolls!*
 
 **Future work: Draw a correlation between merchandise sales and movie releases.*
 
