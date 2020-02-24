@@ -1,13 +1,13 @@
 # MICROSOFT STUDIOS 
 
 
-```python
+
 %%html
 <img src="images/mbuilding.jpg", width=900>
-```
 
 
-![title](images/mbuilding.jpg)
+
+
 
 
 
@@ -172,6 +172,7 @@ Name: profit, dtype: int64
 ## Question: Does a domestic films popularity correlate to big box office numbers here in the States?
 
 *Although there seemed to be a correalation between popularity and vote count when comparing the top 5 studios on a global scale, that does not seem to be transferable to this dataset* 
+
 ```python
 # must have removed this merge, subsequent cells below indicating that tmdb_bom_merge 
 # didn't exist. Naming convention to the rescue!
@@ -191,9 +192,9 @@ Index(['index', 'genre_ids', 'id', 'original_language', 'original_title',
 pop = tmdb_bom_merge.groupby(['title', 'domestic_gross', 'pop/dom_gross'])['popularity'].agg('sum').sort_values(ascending= False)
 pop.head(25)
 ```
-![title](images/pop vs domestic.png)
+![title](images/pop_vs_domestic.png)
 
-![title](images/scatter map.png)
+![title](images/pop_scatter_map.png)
 
 ```python
 title                                        domestic_gross  pop/dom_gross
