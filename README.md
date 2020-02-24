@@ -2,8 +2,8 @@
 
 
 
-%%html
-<img src="images/mbuilding.jpg", width=900>
+
+<img src=images/mbuilding.jpg width=900>
 
 
 
